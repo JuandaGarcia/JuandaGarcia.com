@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*::selection {
+	background-color: #38ef7d;
+	color: white;
+}
+
+body {
+	background-color: #212121;
+	padding: 3em;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+	margin-right: 15px;
+}
+body::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+}
+
+.navegacion {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+li a {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.logo img {
+	height: 4em;
+}
+
+ol {
+	display: flex;
+}
+
+li {
+	margin: 0 1em;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+.redes a {
+	margin: 0 0.3em;
+}
+
+.redes {
+	display: flex;
+	height: 1em;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 85vh;
+}
+
+.img-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	text-transform: uppercase;
+	background-image: url(./img/juandagarcia.png);
+	background-size: 30em;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.info-hero h1 {
+	font-weight: 100;
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
+.info-hero strong {
+	font-family: sans-serif;
+	font-family: 'Raleway', sans-serif;
+}
+
+.info-hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.info-hero button {
+	background: linear-gradient(
+		90deg,
+		rgba(17, 153, 142, 1) 0%,
+		rgba(56, 239, 125, 1) 100%
+	);
+	border: none;
+	border-radius: 5px;
+	height: 3em;
+	width: 10em;
+	font-weight: 800;
+	margin-top: 2em;
+	outline: none;
+}
+
+.info-hero button:hover {
+	background: linear-gradient(
+		90deg,
+		rgba(17, 153, 142, 1) 0%,
+		rgba(56, 239, 125, 1) 50%
+	);
+}
+
+.icono-social {
+	width: 1em;
+	height: 1em;
+}
+
+.linkedin {
+	background-image: url(./img/linkedin.svg);
+	background-repeat: no-repeat;
+}
+.github {
+	background-image: url(./img/github.svg);
+	background-repeat: no-repeat;
+}
+.instagram {
+	background-image: url(./img/instagram.svg);
+	background-repeat: no-repeat;
+}
+.youtube {
+	background-image: url(./img/youtube.svg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.flores-hero {
+	position: absolute;
+	left: -30px;
+	bottom: -60px;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: 'FlipH';
+	background-image: url(./img/flores.png);
+	pointer-events: none;
+}
+
+.soy {
+	position: absolute;
+	z-index: 1;
+}
+
+.flores-hero img {
+	width: 30em;
+	opacity: 50%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
