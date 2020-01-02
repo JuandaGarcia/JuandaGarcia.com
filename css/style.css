@@ -1,13 +1,13 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
 }
 
 *::selection {
     background-color: #38ef7d;
-    color:white;
+    color: white;
 }
 
 body {
@@ -20,8 +20,8 @@ body::-webkit-scrollbar {
     margin-right: 15px;
 }
 body::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
 .navegacion {
@@ -30,8 +30,8 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-li a{
-    font-family: 'Montserrat', sans-serif;
+li a {
+    font-family: "Montserrat", sans-serif;
 }
 
 .logo img {
@@ -48,16 +48,16 @@ li {
     text-transform: uppercase;
 }
 
-ol, li {
+ol,
+li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
 }
-.redes a{
+.redes a {
     margin: 0 0.3em;
-    
 }
 
 .redes {
@@ -74,7 +74,7 @@ a {
     height: 85vh;
 }
 
-.img-hero{
+.img-hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,26 +87,30 @@ a {
     background-position: center;
 }
 
-.info-hero h1{
+.info-hero h1 {
     font-weight: 100;
     font-size: 35px;
     text-transform: uppercase;
 }
 
-.info-hero strong{
+.info-hero strong {
     font-family: sans-serif;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
-.info-hero{
+.info-hero {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
 
-.info-hero button{
-    background-color: #38ef7d;
+.info-hero button {
+    background: linear-gradient(
+        90deg,
+        rgba(17, 153, 142, 1) 0%,
+        rgba(56, 239, 125, 1) 100%
+    );
     border: none;
     border-radius: 5px;
     height: 3em;
@@ -116,30 +120,38 @@ a {
     outline: none;
 }
 
-.icono-social{
+.info-hero button:hover {
+    background: linear-gradient(
+        90deg,
+        rgba(17, 153, 142, 1) 0%,
+        rgba(56, 239, 125, 1) 50%
+    );
+}
+
+.icono-social {
     width: 1em;
     height: 1em;
 }
 
-.linkedin{
+.linkedin {
     background-image: url(../img/linkedin.svg);
     background-repeat: no-repeat;
 }
-.github{
+.github {
     background-image: url(../img/github.svg);
     background-repeat: no-repeat;
 }
-.instagram{
+.instagram {
     background-image: url(../img/instagram.svg);
     background-repeat: no-repeat;
 }
-.youtube{
+.youtube {
     background-image: url(../img/youtube.svg);
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
-.flores-hero{
+.flores-hero {
     position: absolute;
     left: -30px;
     bottom: -60px;
@@ -149,14 +161,15 @@ a {
     filter: FlipH;
     -ms-filter: "FlipH";
     background-image: url(../img/flores.png);
+    pointer-events: none;
 }
 
-.soy{
+.soy {
     position: absolute;
     z-index: 1;
 }
 
-.flores-hero img{
+.flores-hero img {
     width: 30em;
     opacity: 50%;
     -webkit-touch-callout: none;
