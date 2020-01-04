@@ -2,68 +2,123 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../img/logo.png'
 
-function Navbar() {
-	return (
-		<header>
-			<div className="navegacion">
-				<Link to="/">
-					<figure className="logo">
-						<img src={Logo} alt="logo" />
-					</figure>
-				</Link>
-				<nav>
-					<ol>
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="">Proyectos</Link>
-						</li>
-						<li>
-							<Link to="">CV</Link>
-						</li>
-						<li>
-							<Link to="">Contacto</Link>
-						</li>
-					</ol>
-				</nav>
-				<div className="redes">
-					<a
-						className="icono-social linkedin"
-						href="https://www.linkedin.com/in/juandagarciaa/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						{}
-					</a>
-					<a
-						className="icono-social github"
-						href="https://github.com/JuandaGarcia/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						{}
-					</a>
-					<a
-						className="icono-social instagram"
-						href="https://www.instagram.com/juandagarciaa/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						{}
-					</a>
-					<a
-						className="icono-social youtube"
-						href="https://www.youtube.com/channel/UCKDCXohHwtfLDlf2dknPBlw/featured"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						{}
-					</a>
+class Navbar extends React.Component {
+	state = {
+		ActiveClassName: ''
+	}
+
+	toggleMenu() {
+		if (this.state.ActiveClassName === 'is-active') {
+			this.setState({
+				ActiveClassName: ''
+			})
+		} else {
+			this.setState({
+				ActiveClassName: 'is-active'
+			})
+		}
+	}
+
+	handleClick = e => {
+		this.toggleMenu()
+	}
+
+	render() {
+		return (
+			<header>
+				<div className="navegacion">
+					<Link className="noSelect" to="/">
+						<figure className="logo">
+							<img src={Logo} alt="logo" />
+						</figure>
+					</Link>
+					<button
+						onClick={this.handleClick}
+						className={`noSelect burger-button ${this.state.ActiveClassName}`}
+						id="burger-menu"
+					></button>
+					<nav className={`menu ${this.state.ActiveClassName}`}>
+						<ol>
+							<li>
+								<Link
+									className="noSelect"
+									onClick={this.handleClick}
+									id="Home"
+									to="/"
+								>
+									Home
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="noSelect"
+									onClick={this.handleClick}
+									id="Proyectos"
+									to="/proyectos"
+								>
+									Proyectos
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="noSelect"
+									onClick={this.handleClick}
+									id="Sobre"
+									to="/sobre-mi"
+								>
+									Sobre mí
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="noSelect"
+									onClick={this.handleClick}
+									id="Contacto"
+									to="/contacto"
+								>
+									Contacto
+								</Link>
+							</li>
+						</ol>
+					</nav>
+					<div className="redes">
+						<a
+							className="icono-social linkedin"
+							href="https://www.linkedin.com/in/juandagarciaa/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{}
+						</a>
+						<a
+							className="icono-social github"
+							href="https://github.com/JuandaGarcia/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{}
+						</a>
+						<a
+							className="icono-social instagram"
+							href="https://www.instagram.com/juandagarciaa/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{}
+						</a>
+						<a
+							className="icono-social youtube"
+							href="https://www.youtube.com/channel/UCKDCXohHwtfLDlf2dknPBlw/featured"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{}
+						</a>
+					</div>
 				</div>
-			</div>
-		</header>
-	)
+			</header>
+		)
+	}
 }
 
 export default Navbar

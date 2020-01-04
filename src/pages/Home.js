@@ -1,5 +1,6 @@
 import React from 'react'
-import Flores from '../img/flores.png'
+import Flores from '../img/flores.svg'
+import Coder from '../img/juandagarcia.png'
 
 function Home() {
 	return (
@@ -11,13 +12,15 @@ function Home() {
 						<br />
 						<strong>Juan David Garcia Rincon</strong>
 					</h1>
-					<button>Ver más</button>
+					<button className="btn-primary">Ver más</button>
 				</div>
 				<figure className="flores-hero">
 					<img src={Flores} alt="flores" />
 				</figure>
 			</div>
-			<div className="img-hero"></div>
+			<figure className="img-hero">
+				<img src={Coder} alt="" />
+			</figure>
 		</section>
 	)
 }

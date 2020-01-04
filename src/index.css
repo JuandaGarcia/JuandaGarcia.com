@@ -13,6 +13,21 @@
 body {
 	background-color: #212121;
 	padding: 3em;
+	height: 100vh;
+}
+
+#App {
+	height: 100%;
+}
+
+.noSelect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body::-webkit-scrollbar {
@@ -28,6 +43,7 @@ body::-webkit-scrollbar-thumb {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 5%;
 }
 
 li a {
@@ -36,6 +52,7 @@ li a {
 
 .logo img {
 	height: 4em;
+	pointer-events: none;
 }
 
 ol {
@@ -71,7 +88,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 85vh;
+	height: 95%;
 }
 
 .img-hero {
@@ -81,10 +98,21 @@ a {
 	width: 50%;
 	height: 100%;
 	text-transform: uppercase;
-	background-image: url(./img/juandagarcia.png);
 	background-size: 30em;
 	background-repeat: no-repeat;
 	background-position: center;
+	pointer-events: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow: hidden;
+}
+
+.img-hero img {
+	height: 70%;
 }
 
 .info-hero h1 {
@@ -105,7 +133,7 @@ a {
 	width: 50%;
 }
 
-.info-hero button {
+.btn-primary {
 	background: linear-gradient(
 		90deg,
 		rgba(17, 153, 142, 1) 0%,
@@ -120,7 +148,7 @@ a {
 	outline: none;
 }
 
-.info-hero button:hover {
+.btn-primary:hover {
 	background: linear-gradient(
 		90deg,
 		rgba(17, 153, 142, 1) 0%,
@@ -160,12 +188,11 @@ a {
 	transform: scaleX(-1);
 	filter: FlipH;
 	-ms-filter: 'FlipH';
-	background-image: url(./img/flores.png);
 	pointer-events: none;
 }
 
 .soy {
-	position: absolute;
+	position: relative;
 	z-index: 1;
 }
 
@@ -178,4 +205,90 @@ a {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+.burger-button {
+	height: 2em;
+	width: 2em;
+	display: none;
+	text-align: center;
+	outline: none;
+	border: none;
+	background-image: url(./img/menu.svg);
+	background-color: transparent;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+	.hero {
+		flex-wrap: wrap-reverse;
+	}
+
+	.flores-hero img {
+		width: 20em;
+	}
+
+	.img-hero {
+		width: 100%;
+		height: 50%;
+	}
+
+	.img-hero img {
+		height: 100%;
+	}
+
+	.info-hero {
+		width: 100%;
+	}
+
+	.burger-button {
+		display: flex;
+	}
+
+	.redes {
+		display: none;
+	}
+
+	.menu {
+		position: fixed;
+		background: rgba(33, 33, 33, 0.9);
+		z-index: 2;
+		top: 0;
+		left: -100vw;
+		width: 100vw;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 0.3s;
+	}
+
+	ol {
+		display: block;
+		text-align: center;
+	}
+
+	li {
+		margin: 1em;
+		font-size: 2em;
+	}
+
+	.menu.is-active {
+		left: 0;
+	}
+
+	.burger-button.is-active {
+		background-image: url(./img/cancel.svg);
+		position: relative;
+		z-index: 3;
+	}
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 320px) {
 }
