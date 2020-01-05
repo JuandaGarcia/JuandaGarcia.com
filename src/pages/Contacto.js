@@ -1,7 +1,8 @@
 import React from 'react'
+import ContactForm from '../components/ContactForm'
 
 function Contacto() {
-	return <h1>Pagina en construcción</h1>
+	return <ContactForm />
 }
 
 export default Contacto

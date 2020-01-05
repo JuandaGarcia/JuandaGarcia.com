@@ -1,7 +1,8 @@
 import React from 'react'
+import ProyectosSection from '../components/ProyectosSection'
 
 function Proyectos() {
-	return <h1>Pagina en construcción</h1>
+	return <ProyectosSection />
 }
 
 export default Proyectos
