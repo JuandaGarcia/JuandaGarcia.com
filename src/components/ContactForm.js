@@ -9,8 +9,6 @@ class ContactForm extends React.Component {
 						<div className="hands">
 							<svg
 								className="hand-left"
-								width="159"
-								height="282"
 								viewBox="0 0 159 282"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +60,6 @@ class ContactForm extends React.Component {
 
 							<svg
 								className="hand-right"
-								width="159"
-								height="282"
 								viewBox="0 0 159 282"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -124,16 +120,62 @@ class ContactForm extends React.Component {
 				</div>
 				<div className="form">
 					<div className="container-form">
-						<input required className="input-textarea" type="text" />
+						<div className="redes-form">
+							<a
+								className="icono-social email noSelect"
+								href="mailto: juandagarciadev@gmail.com"
+								rel="noopener noreferrer"
+							>
+								{}
+							</a>
+							<a
+								className="icono-social whatsapp noSelect"
+								href="https://api.whatsapp.com/send?phone=573184291360&text=Hola%20Juan"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{}
+							</a>
+							<a
+								className="icono-social instagram noSelect"
+								href="https://www.instagram.com/juandagarciaa/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{}
+							</a>
+							<a
+								className="icono-social linkedin noSelect"
+								href="https://www.linkedin.com/in/juandagarciaa/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{}
+							</a>
+						</div>
+						<input
+							placeholder="Nombre"
+							required
+							className="input-textarea"
+							type="text"
+							maxLength="40"
+						/>
 						<br />
-						<input required className="input-textarea" type="email" />
+						<input
+							required
+							placeholder="Email"
+							className="input-textarea"
+							type="email"
+							maxLength="50"
+						/>
 						<br />
 						<textarea
+							placeholder="Mensaje"
 							required
 							className="input-textarea"
 							name=""
 							id=""
-							rows="8"
+							rows="5"
 						></textarea>
 						<button className="btn-primary">Enviar</button>
 					</div>

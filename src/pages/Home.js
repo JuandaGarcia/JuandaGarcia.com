@@ -1,8 +1,6 @@
 import React from 'react'
 import Flores from '../img/flores.svg'
 import Coder from '../img/juandagarcia.png'
-import ContactForm from '../components/ContactForm'
-import ProyectosSection from '../components/ProyectosSection'
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -17,8 +15,7 @@ function Home() {
 							<strong>Juan David Garcia Rincon</strong>
 						</h1>
 						<p>
-							Frontend Developer con gran pasión por el diseño y el desarrollo
-							web
+							Frontend Developer con gran pasión por el diseño y desarrollo web.
 						</p>
 						<Link to="/sobre-mi" className="cur">
 							<button className="btn-primary">Ver más</button>
@@ -29,11 +26,9 @@ function Home() {
 					</figure>
 				</div>
 				<figure className="img-hero">
-					<img src={Coder} alt="" />
+					<img src={Coder} alt="Juanda Garcia" />
 				</figure>
 			</section>
-			<ProyectosSection />
-			<ContactForm />
 		</React.Fragment>
 	)
 }

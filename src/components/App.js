@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import Proyectos from '../pages/Proyectos'
 import SobreMi from '../pages/SobreMi'
 import Contacto from '../pages/Contacto'
+import NotFound from '../pages/NotFound'
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route exact path="/proyectos" component={Proyectos} />
 					<Route exact path="/sobre-mi" component={SobreMi} />
 					<Route exact path="/contacto" component={Contacto} />
+					<Route component={NotFound} />
 				</Switch>
 			</Layout>
 		</BrowserRouter>

@@ -41,7 +41,7 @@ class Navbar extends React.Component {
 						<ol>
 							<li>
 								<Link
-									className="noSelect"
+									className="noSelect link-navbar"
 									onClick={this.handleClick}
 									id="Home"
 									to="/"
@@ -51,17 +51,7 @@ class Navbar extends React.Component {
 							</li>
 							<li>
 								<Link
-									className="noSelect"
-									onClick={this.handleClick}
-									id="Proyectos"
-									to="/proyectos"
-								>
-									Proyectos
-								</Link>
-							</li>
-							<li>
-								<Link
-									className="noSelect"
+									className="noSelect link-navbar"
 									onClick={this.handleClick}
 									id="Sobre"
 									to="/sobre-mi"
@@ -71,7 +61,17 @@ class Navbar extends React.Component {
 							</li>
 							<li>
 								<Link
-									className="noSelect"
+									className="noSelect link-navbar"
+									onClick={this.handleClick}
+									id="Proyectos"
+									to="/proyectos"
+								>
+									Proyectos
+								</Link>
+							</li>
+							<li>
+								<Link
+									className="noSelect link-navbar"
 									onClick={this.handleClick}
 									id="Contacto"
 									to="/contacto"
@@ -83,7 +83,7 @@ class Navbar extends React.Component {
 					</nav>
 					<div className="redes">
 						<a
-							className="icono-social linkedin"
+							className="icono-social linkedin noSelect"
 							href="https://www.linkedin.com/in/juandagarciaa/"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -91,7 +91,7 @@ class Navbar extends React.Component {
 							{}
 						</a>
 						<a
-							className="icono-social github"
+							className="icono-social github noSelect"
 							href="https://github.com/JuandaGarcia/"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -99,7 +99,7 @@ class Navbar extends React.Component {
 							{}
 						</a>
 						<a
-							className="icono-social instagram"
+							className="icono-social instagram noSelect"
 							href="https://www.instagram.com/juandagarciaa/"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -107,7 +107,7 @@ class Navbar extends React.Component {
 							{}
 						</a>
 						<a
-							className="icono-social youtube"
+							className="icono-social youtube noSelect"
 							href="https://www.youtube.com/channel/UCKDCXohHwtfLDlf2dknPBlw/featured"
 							target="_blank"
 							rel="noopener noreferrer"
