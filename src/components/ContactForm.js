@@ -153,31 +153,33 @@ class ContactForm extends React.Component {
 								{}
 							</a>
 						</div>
-						<input
-							placeholder="Nombre"
-							required
-							className="input-textarea"
-							type="text"
-							maxLength="40"
-						/>
-						<br />
-						<input
-							required
-							placeholder="Email"
-							className="input-textarea"
-							type="email"
-							maxLength="50"
-						/>
-						<br />
-						<textarea
-							placeholder="Mensaje"
-							required
-							className="input-textarea"
-							name=""
-							id=""
-							rows="5"
-						></textarea>
-						<button className="btn-primary">Enviar</button>
+						<form action="">
+							<input
+								placeholder="Nombre"
+								required
+								className="input-textarea"
+								type="text"
+								maxLength="40"
+							/>
+							<br />
+							<input
+								required
+								placeholder="Email"
+								className="input-textarea"
+								type="email"
+								maxLength="50"
+							/>
+							<br />
+							<textarea
+								placeholder="Mensaje"
+								required
+								className="input-textarea"
+								name=""
+								id=""
+								rows="5"
+							></textarea>
+							<button className="btn-primary">Enviar</button>
+						</form>
 					</div>
 				</div>
 			</section>
