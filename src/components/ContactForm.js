@@ -122,14 +122,14 @@ class ContactForm extends React.Component {
 					<div className="container-form">
 						<div className="redes-form">
 							<a
-								className="icono-social email noSelect"
+								className="icono-social-contacto email noSelect"
 								href="mailto: juandagarciadev@gmail.com"
 								rel="noopener noreferrer"
 							>
 								{}
 							</a>
 							<a
-								className="icono-social whatsapp noSelect"
+								className="icono-social-contacto whatsapp noSelect"
 								href="https://api.whatsapp.com/send?phone=573184291360&text=Hola%20Juan"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -137,7 +137,7 @@ class ContactForm extends React.Component {
 								{}
 							</a>
 							<a
-								className="icono-social instagram noSelect"
+								className="icono-social-contacto instagram noSelect"
 								href="https://www.instagram.com/juandagarciaa/"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -145,8 +145,24 @@ class ContactForm extends React.Component {
 								{}
 							</a>
 							<a
-								className="icono-social linkedin noSelect"
+								className="icono-social-contacto linkedin noSelect"
 								href="https://www.linkedin.com/in/juandagarciaa/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{}
+							</a>
+							<a
+								className="icono-social-contacto github noSelect"
+								href="https://www.github.com/juandagarcia/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{}
+							</a>
+							<a
+								className="icono-social-contacto youtube noSelect"
+								href="https://www.github.com/juandagarcia/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -178,7 +194,9 @@ class ContactForm extends React.Component {
 								id=""
 								rows="5"
 							></textarea>
-							<button className="btn-primary">Enviar</button>
+							<div className="noSelect">
+								<button className="btn-primary">Enviar</button>
+							</div>
 						</form>
 					</div>
 				</div>

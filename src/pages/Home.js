@@ -17,8 +17,8 @@ function Home() {
 						<p>
 							Frontend Developer con gran pasión por el diseño y desarrollo web.
 						</p>
-						<Link to="/sobre-mi" className="cur">
-							<button className="btn-primary">Ver más</button>
+						<Link to="/sobre-mi" className="noSelect">
+							<button className="btn-primary noSelect">Ver más</button>
 						</Link>
 					</div>
 					<figure className="flores-hero">

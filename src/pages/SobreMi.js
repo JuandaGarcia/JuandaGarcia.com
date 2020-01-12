@@ -30,8 +30,8 @@ function SobreMi() {
 							href="https://platzi.com/clases/html5-css3/"
 						>
 							<strong>Desarrollo web online</strong>
-						</a>{' '}
-						,{' '}
+						</a>
+						{''},{' '}
 						<a
 							className="noSelect"
 							target="_blank"
@@ -39,8 +39,8 @@ function SobreMi() {
 							href="https://platzi.com/clases/responsive-design/"
 						>
 							<strong>Responsive Design</strong>
-						</a>{' '}
-						,{' '}
+						</a>
+						{''},{' '}
 						<a
 							className="noSelect"
 							target="_blank"
@@ -48,8 +48,8 @@ function SobreMi() {
 							href="https://platzi.com/clases/fundamentos-javascript/"
 						>
 							<strong>Fundamentos de JavaScript</strong>
-						</a>{' '}
-						,{' '}
+						</a>
+						{''},{' '}
 						<a
 							className="noSelect"
 							target="_blank"
@@ -57,8 +57,8 @@ function SobreMi() {
 							href="https://platzi.com/clases/react/"
 						>
 							<strong>React.js</strong>
-						</a>{' '}
-						,{' '}
+						</a>
+						{''},{' '}
 						<a
 							className="noSelect"
 							target="_blank"
@@ -66,8 +66,8 @@ function SobreMi() {
 							href="https://platzi.com/clases/redux/"
 						>
 							<strong>Redux</strong>
-						</a>{' '}
-						, etc.
+						</a>
+						{''}, etc.
 					</p>
 					<br />
 					<div className="list-info-sobremi">
@@ -97,11 +97,9 @@ function SobreMi() {
 						</ul>
 					</div>
 				</div>
-				{
-					<div className="sobre-mi-img">
-						<img src={me} alt="Juanda Garcia" />
-					</div>
-				}
+				<div className="sobre-mi-img">
+					<img src={me} alt="Juanda Garcia" />
+				</div>
 			</div>
 		</div>
 	)
