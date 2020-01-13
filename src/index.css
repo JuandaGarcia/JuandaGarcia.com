@@ -159,15 +159,17 @@ a {
 	);
 	border: none;
 	border-radius: 5px;
-	height: 3em;
-	width: 10em;
+	height: 40px;
+	width: 130px;
 	font-weight: 800;
-	margin-top: 1em;
+	margin-top: 16px;
 	outline: none;
 	cursor: url('./img/cursor-pointer.png'), pointer;
+	transition: 0.2s;
 }
 
 .btn-primary:hover {
+	font-size: 16px;
 	background: linear-gradient(
 		90deg,
 		rgba(17, 153, 142, 1) 0%,
@@ -234,7 +236,47 @@ a {
 
 .flores-hero img {
 	width: 30em;
-	opacity: 50%;
+	opacity: 60%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.flores-projects {
+	position: fixed;
+	right: -30px;
+	bottom: -60px;
+	pointer-events: none;
+}
+
+.flores-projects-vuelta {
+	position: fixed;
+	left: -30px;
+	bottom: -60px;
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: 'FlipH';
+	pointer-events: none;
+}
+
+.flores-projects img {
+	width: 40em;
+	opacity: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.flores-projects-vuelta img {
+	width: 40em;
+	opacity: 100%;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -446,6 +488,7 @@ textarea::-webkit-scrollbar-thumb {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	padding-top: 50px;
 }
 
 .img-proyectos {
@@ -470,16 +513,62 @@ textarea::-webkit-scrollbar-thumb {
 
 .card-proyecto {
 	border-radius: 10px;
-	width: 60%;
+	width: 400px;
 	margin-bottom: 40px;
+	font-size: 16px;
 	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.card-proyecto img {
+	display: inline-block;
+	position: relative;
+	left: 40%;
+	pointer-events: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+.info-card {
+	position: absolute;
+	padding-right: 100px;
+}
+
+.card-proyecto h1 {
+	font-size: 3em;
+	font-family: 'Raleway', sans-serif;
+	transition: 0.2s;
+}
+
+.card-proyecto p {
+	font-size: 1em;
+	transition: 0.2s;
+}
+
+.card-proyecto:hover {
+	font-size: 20px;
+}
+
+.card-1 img {
+	width: 250px;
+}
+.card-2 img {
+	width: 200px;
 }
 
 .card-1 {
 	background: linear-gradient(90deg, #24c6dc, #514a9d);
 }
 .card-2 {
-	background: linear-gradient(90deg, #e96443, #904e95);
+	background: linear-gradient(90deg, #8e2de2, #4a00e0);
 }
 
 .content {
@@ -914,6 +1003,13 @@ path#f3-l9 {
 
 .sobre-mi-img img {
 	width: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
 }
 
 #box {
@@ -1000,9 +1096,36 @@ path#f3-l9 {
 	.form {
 		width: 100%;
 	}
+	.flores-projects img {
+		width: 30em;
+	}
+	.flores-projects-vuelta img {
+		width: 30em;
+	}
 }
 
 @media screen and (max-width: 768px) {
+	.movile-web-proyects {
+		width: 90%;
+	}
+
+	.card-proyecto {
+		width: 100%;
+	}
+
+	.card-1 img {
+		width: 170px;
+	}
+	.card-2 img {
+		width: 150px;
+	}
+
+	.flores-projects img {
+		width: 20em;
+	}
+	.flores-projects-vuelta img {
+		width: 20em;
+	}
 	.illustration {
 		display: none;
 	}
