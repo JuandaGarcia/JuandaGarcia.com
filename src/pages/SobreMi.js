@@ -9,11 +9,8 @@ function SobreMi() {
 					<h1>Sobre mí</h1>
 					<br />
 					<p>
-						Además de los cursos que he tomado en la universidad, he tomado
-						varios cursos en línea a medida que avanzo en mis habilidades.
-						Algunos de estos cursos en línea que he tomado incluyen The React
-						Complete Guide , The Complete JavaScript Course y HTML & CSS for
-						Beginners.
+						Hola, soy Juan David Garcia Rincon tengo 19 años y actualmente me
+						encuentro estudiando sistemas en la universidad Santiago de Cali.
 					</p>
 					<br />
 					<br />
@@ -22,7 +19,7 @@ function SobreMi() {
 					<p>
 						Además de los cursos que he tomado en la universidad, he tomado
 						varios cursos en línea a medida que avanzo en mis habilidades.
-						Algunos de estos cursos en línea que he tomado incluyen{' '}
+						Algunos de estos cursos incluyen{' '}
 						<a
 							className="noSelect"
 							target="_blank"

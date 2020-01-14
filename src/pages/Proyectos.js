@@ -8,14 +8,14 @@ function Proyectos() {
 	return (
 		<div className="ProyectosSection">
 			<div className="movile-web-proyects">
-				<Link className="card-proyecto noSelect card-1">
+				<Link to="/proyectos/web" className="card-proyecto noSelect card-1">
 					<div className="info-card">
 						<h1>Web</h1>
 						<p>10 Projects</p>
 					</div>
 					<img src={Web} alt="Web" />
 				</Link>
-				<Link className="card-proyecto noSelect card-2">
+				<Link to="/proyectos/web" className="card-proyecto noSelect card-2">
 					<div className="info-card">
 						<h1>Móvil</h1>
 						<p>10 Projects</p>

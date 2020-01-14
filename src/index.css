@@ -22,10 +22,6 @@ body {
 	height: 100%;
 }
 
-a {
-	cursor: url('./img/cursor-pointer.png'), pointer;
-}
-
 .noSelect {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -89,6 +85,7 @@ li {
 
 a {
 	text-decoration: none;
+	cursor: url('./img/cursor-pointer.png'), pointer;
 }
 .redes a {
 	margin: 0 0.3em;
@@ -521,6 +518,9 @@ textarea::-webkit-scrollbar-thumb {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	-webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card-proyecto img {
@@ -1077,6 +1077,118 @@ path#f3-l9 {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.proyecto-item {
+	width: 350px;
+	height: 200px;
+	background-color: #303030;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 45px;
+	--tamaño: 5px;
+	--color: white;
+}
+
+.proyecto-item:hover {
+	--tamaño: 10px;
+	--color: #38ef7d;
+	background: #282828;
+	-webkit-transition: background-color 0.2s ease-out;
+	-moz-transition: background-color 0.2s ease-out;
+	-o-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+}
+
+.proyecto-item h1 {
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 15px;
+	align-items: center;
+	color: var(--color);
+}
+
+.proyecto-item li {
+	font-size: 10px;
+}
+.proyecto-item p {
+	margin-top: 15px;
+}
+
+.proyecto-item img {
+	width: 60%;
+	position: relative;
+	left: 0%;
+	object-fit: contain;
+}
+
+.contenedor-item {
+	display: flex;
+	width: 100%;
+	height: 95%;
+}
+
+.barra-item {
+	width: 100%;
+	height: 15%;
+	background-color: #424242;
+	display: flex;
+	align-items: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding-left: 15px;
+}
+
+.circulo-item {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 0 var(--tamaño);
+	transition: 0.2s;
+}
+
+.circulo-rojo {
+	background: linear-gradient(90deg, #e43a15 0%, #e65245 100%);
+}
+.circulo-amarillo {
+	background: linear-gradient(270deg, #f9d423 0%, #ff4e50 100%);
+}
+.circulo-verde {
+	background: linear-gradient(270deg, #11998e 0%, #38ef7d 100%);
+}
+
+.info-item {
+	width: 50%;
+	height: 95%;
+	padding: 35px;
+	padding-bottom: 0;
+}
+
+.project-type {
+	width: 100%;
+	height: 92%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow: auto;
+}
+
+.project-type-title {
+	width: 80%;
+	height: 5%;
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	padding-bottom: 8%;
+}
+
+.project-type::-webkit-scrollbar {
+	width: 10px;
+	margin-right: 15px;
+}
+.project-type::-webkit-scrollbar-thumb {
+	background: transparent;
+	border-radius: 5px;
 }
 
 @media screen and (max-width: 1024px) {
