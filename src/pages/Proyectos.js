@@ -15,7 +15,7 @@ function Proyectos() {
 					</div>
 					<img src={Web} alt="Web" />
 				</Link>
-				<Link to="/proyectos/web" className="card-proyecto noSelect card-2">
+				<Link to="/proyectos/movil" className="card-proyecto noSelect card-2">
 					<div className="info-card">
 						<h1>Móvil</h1>
 						<p>10 Projects</p>

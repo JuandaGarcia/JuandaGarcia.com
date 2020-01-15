@@ -1191,6 +1191,40 @@ path#f3-l9 {
 	border-radius: 5px;
 }
 
+.loader {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+	opacity: 0.8;
+	align-items: center;
+	display: flex;
+}
+.loader span {
+	color: #38ef7d;
+	padding: 0 10px;
+	display: inline-block;
+	-webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+	animation: pulse 0.4s alternate infinite ease-in-out;
+}
+.loader span:nth-child(odd) {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+@-webkit-keyframes pulse {
+	to {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: 0.5;
+	}
+}
+@keyframes pulse {
+	to {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: 0.5;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.menu {
 		font-size: 11px;

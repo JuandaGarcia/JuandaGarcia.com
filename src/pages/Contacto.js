@@ -168,11 +168,12 @@ function Contacto() {
 							{}
 						</a>
 					</div>
-					<form action="">
+					<form action="https://localhost:3000/php/contacto.php" method="post">
 						<input
 							placeholder="Nombre"
 							required
 							className="input-textarea"
+							name="name"
 							type="text"
 							maxLength="40"
 						/>
@@ -181,6 +182,7 @@ function Contacto() {
 							required
 							placeholder="Email"
 							className="input-textarea"
+							name="email"
 							type="email"
 							maxLength="50"
 						/>
@@ -189,7 +191,7 @@ function Contacto() {
 							placeholder="Mensaje"
 							required
 							className="input-textarea"
-							name=""
+							name="mensaje"
 							id=""
 							rows="5"
 						></textarea>

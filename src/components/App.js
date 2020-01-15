@@ -7,6 +7,7 @@ import ProjectType from '../pages/ProjectType'
 import SobreMi from '../pages/SobreMi'
 import Contacto from '../pages/Contacto'
 import NotFound from '../pages/NotFound'
+import projectDetails from '../pages/projectDetails'
 
 function App() {
 	return (
@@ -15,7 +16,12 @@ function App() {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route exact path="/proyectos" component={Proyectos} />
-					<Route exact path="/proyectos/web" component={ProjectType} />
+					<Route exact path="/proyectos/:projectType" component={ProjectType} />
+					<Route
+						exact
+						path="/proyectos/:projectType/:projectDetails"
+						component={projectDetails}
+					/>
 					<Route exact path="/sobre-mi" component={SobreMi} />
 					<Route exact path="/contacto" component={Contacto} />
 					<Route component={NotFound} />
