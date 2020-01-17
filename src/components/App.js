@@ -7,7 +7,7 @@ import ProjectType from '../pages/ProjectType'
 import SobreMi from '../pages/SobreMi'
 import Contacto from '../pages/Contacto'
 import NotFound from '../pages/NotFound'
-import projectDetails from '../pages/projectDetails'
+import ProjectDetails from '../pages/ProjectDetails'
 
 function App() {
 	return (
@@ -20,7 +20,7 @@ function App() {
 					<Route
 						exact
 						path="/proyectos/:projectType/:projectDetails"
-						component={projectDetails}
+						component={ProjectDetails}
 					/>
 					<Route exact path="/sobre-mi" component={SobreMi} />
 					<Route exact path="/contacto" component={Contacto} />

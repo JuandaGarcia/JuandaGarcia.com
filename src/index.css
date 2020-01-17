@@ -184,6 +184,18 @@ a {
 	height: 25px;
 }
 
+.app-store {
+	background-image: url(./img/app-store.svg);
+	background-repeat: no-repeat;
+}
+.google-play {
+	background-image: url(./img/google-play.svg);
+	background-repeat: no-repeat;
+}
+.link {
+	background-image: url(./img/link.svg);
+	background-repeat: no-repeat;
+}
 .linkedin {
 	background-image: url(./img/linkedin.svg);
 	background-repeat: no-repeat;
@@ -1173,6 +1185,14 @@ path#f3-l9 {
 	overflow: auto;
 }
 
+.project-type ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow: auto;
+}
+
 .project-type-title {
 	width: 80%;
 	height: 5%;
@@ -1223,6 +1243,79 @@ path#f3-l9 {
 		transform: scale(0.8);
 		opacity: 0.5;
 	}
+}
+
+.contenedor-detalles {
+	display: flex;
+	width: 100%;
+	height: 85%;
+	flex-wrap: wrap;
+}
+
+.img-detalles-proyecto {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-detalles-proyecto img {
+	width: 90%;
+}
+
+.info-detalles-proyecto {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.info-detalles-proyecto h1 {
+	text-align: center;
+}
+
+.parrafo-detalles {
+	width: 100%;
+	background-color: #303030;
+	padding: 1em;
+	margin: 1em 0;
+	border-radius: 5px;
+}
+
+.lista-detalles {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.lista-detalles li {
+	color: #38ef7d;
+	padding: 0.5em 0;
+	padding-right: 3em;
+}
+
+.botones-detalles {
+	display: flex;
+	margin-top: 1.5em;
+	flex-wrap: wrap;
+}
+
+.btn-details {
+	background-color: #424242;
+	width: 11.5em;
+	height: 2.5em;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	padding: 1em;
+	justify-content: space-between;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.icono-btn-details {
+	width: 1.5em;
+	height: 1.5em;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1402,6 +1495,13 @@ path#f3-l9 {
 
 	.redes-form .icono-social-contacto {
 		margin: 0 10px;
+	}
+
+	.img-detalles-proyecto {
+		width: 100%;
+	}
+	.info-detalles-proyecto {
+		width: 100%;
 	}
 }
 
