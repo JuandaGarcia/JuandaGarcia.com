@@ -7,10 +7,8 @@ import Loader from '../components/Loader'
 class ProjectType extends React.Component {
 	state = {
 		type: this.props.match.params.projectType,
-		data: {
-			name: '',
-			projects: []
-		},
+		data: [],
+		title: '',
 		loading: false,
 		error: null
 	}
@@ -34,8 +32,9 @@ class ProjectType extends React.Component {
 				})
 				.catch(/* console.error */)
 			const data = await response.json()
+			const title = data[0].type
 
-			this.setState({ loading: false, data: data })
+			this.setState({ loading: false, data: data, title: title })
 		} catch (error) {
 			this.setState({ loading: false, error: error })
 		}
@@ -56,21 +55,16 @@ class ProjectType extends React.Component {
 
 		return (
 			<div className="project-type">
-				<h1 className="project-type-title">{this.state.data.name}</h1>
-				<ul>
-					{this.state.data.projects.map(project => {
-						return (
-							<li key={project.id}>
-								<Link to={`/proyectos/${this.state.type}/${project.id}`}>
-									<ProyectoItem
-										projects={project}
-										type={this.state.data.name}
-									/>
-								</Link>
-							</li>
-						)
-					})}
-				</ul>
+				<h1 className="project-type-title">{this.state.title}</h1>
+				{this.state.data.map(project => {
+					return (
+						<div key={project.id}>
+							<Link to={`/proyectos/${this.state.type}/${project.id}`}>
+								<ProyectoItem projects={project} type={project.type} />
+							</Link>
+						</div>
+					)
+				})}
 			</div>
 		)
 	}

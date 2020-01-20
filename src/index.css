@@ -1185,14 +1185,6 @@ path#f3-l9 {
 	overflow: auto;
 }
 
-.project-type ul {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	overflow: auto;
-}
-
 .project-type-title {
 	width: 80%;
 	height: 5%;

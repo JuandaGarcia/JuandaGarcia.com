@@ -19,7 +19,7 @@ function App() {
 					<Route exact path="/proyectos/:projectType" component={ProjectType} />
 					<Route
 						exact
-						path="/proyectos/:projectType/:projectDetails"
+						path="/proyectos/:projectType/:projectName"
 						component={ProjectDetails}
 					/>
 					<Route exact path="/sobre-mi" component={SobreMi} />
