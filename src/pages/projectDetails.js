@@ -1,6 +1,8 @@
 import React from 'react'
 import NotFound from './NotFound'
 import Loader from '../components/Loader'
+import { projects } from '../data/projects'
+import ProjectButtons from '../components/ProjectButtons'
 
 class ProjectDetails extends React.Component {
 	state = {
@@ -21,46 +23,32 @@ class ProjectDetails extends React.Component {
 	}
 
 	componentDidMount() {
-		this.fetchData()
+		this.filterProject()
 	}
 
-	fetchData = async () => {
+	filterProject = () => {
 		this.setState({ loading: true, error: null })
 		try {
-			const response = await fetch(
-				`https://my-json-server.typicode.com/JuandaGarcia/db-page/${this.state.type}?id=${this.state.name_project}`
+			const filter = Object.keys(projects)
+				.filter(key => this.state.type === key)
+				.reduce((obj, key) => {
+					obj[key] = projects[key]
+					return obj
+				}, {})
+
+			const data = filter[Object.keys(filter)[0]]
+
+			const projectDetails = data.filter(
+				type => type.id === this.state.name_project
 			)
-				.then(res => {
-					if (res.ok) {
-						return res
-					} else {
-						throw Error(`No se encontro esta pag ${res.status}`)
-					}
-				})
-				.catch(/* console.error */)
-			const data = await response.json()
-			if (!data.length) {
-				this.setState({ error: true })
+
+			if (!projectDetails.length) {
+				throw Error('404')
 			}
-			this.setState({ loading: false, data: data[0] })
+
+			this.setState({ loading: false, data: projectDetails[0] })
 		} catch (error) {
 			this.setState({ loading: false, error: error })
-		}
-	}
-
-	buttons = (link, css, text) => {
-		if (link) {
-			return (
-				<a
-					className="btn-details"
-					href={link}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					{text}
-					<div className={`icono-btn-details ${css}`}></div>
-				</a>
-			)
 		}
 	}
 
@@ -81,8 +69,8 @@ class ProjectDetails extends React.Component {
 				<div className="img-detalles-proyecto">
 					<img
 						className="noSelect"
-						src="https://plantillo.net/uploads/jMtI1bioC0h8jrLomG0I-1523301896.png"
-						alt="Imagen-de-proyecto"
+						src={this.state.data.img_details}
+						alt={`${this.state.data.name} img`}
 					/>
 				</div>
 				<div className="info-detalles-proyecto">
@@ -97,22 +85,26 @@ class ProjectDetails extends React.Component {
 							))}
 						</ul>
 						<div className="botones-detalles">
-							{this.buttons(
-								this.state.data.github_link,
-								'github',
-								'Ver en GitHub'
-							)}
-							{this.buttons(this.state.data.link, 'link', 'Ver sitio')}
-							{this.buttons(
-								this.state.data.play_store,
-								'google-play',
-								'Ver en Play Store'
-							)}
-							{this.buttons(
-								this.state.data.app_store,
-								'app-store',
-								'Ver en App Store'
-							)}
+							<ProjectButtons
+								link={this.state.data.github_link}
+								css={'github'}
+								text={'Ver en GitHub'}
+							/>
+							<ProjectButtons
+								link={this.state.data.play_store}
+								css={'google-play'}
+								text={'Play Store'}
+							/>
+							<ProjectButtons
+								link={this.state.data.app_store}
+								css={'app-store'}
+								text={'App Store'}
+							/>
+							<ProjectButtons
+								link={this.state.data.link}
+								css={'link'}
+								text={'Ver sitio'}
+							/>
 						</div>
 					</div>
 				</div>

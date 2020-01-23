@@ -9,7 +9,7 @@ function SobreMi() {
 					<h1>Sobre mí</h1>
 					<br />
 					<p>
-						Hola, soy Juan David Garcia Rincon tengo 19 años y actualmente me
+						Hola, soy Juan David García Rincón tengo 19 años y actualmente me
 						encuentro estudiando sistemas en la universidad Santiago de Cali.
 					</p>
 					<br />

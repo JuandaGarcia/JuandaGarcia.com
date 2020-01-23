@@ -9,8 +9,8 @@
     correo:".$correo."
     mensaje:".$mensaje."
     ";
-    $listo="/";
+    $listo="/contacto";
     if(mail($email,"Contacto",$message)){
-        //Header ("location:$listo");
+        header('Location: /');
     }
 ?>

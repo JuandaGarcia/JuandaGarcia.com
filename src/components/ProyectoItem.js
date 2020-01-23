@@ -17,13 +17,11 @@ function ProyectoItem(props) {
 							return <li key={technologies}>{`• ${technologies}`}</li>
 						})}
 					</ul>
-					<p>{props.type}</p>
 				</div>
 				<img
-					src={
-						/* project.img */ 'http://localhost:3000/img/juandagarcia-item.png'
-					}
-					alt=""
+					className={`item-img-${props.imgClase}`}
+					src={project.img}
+					alt={`${project.name} img`}
 				/>
 			</div>
 		</div>

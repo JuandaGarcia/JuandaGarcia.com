@@ -168,7 +168,7 @@ function Contacto() {
 							{}
 						</a>
 					</div>
-					<form action="https://localhost:3000/php/contacto.php" method="post">
+					<form action="https://juandagarcia.com/contacto.php" method="post">
 						<input
 							placeholder="Nombre"
 							required

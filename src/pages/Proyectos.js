@@ -11,14 +11,14 @@ function Proyectos() {
 				<Link to="/proyectos/web" className="card-proyecto noSelect card-1">
 					<div className="info-card">
 						<h1>Web</h1>
-						<p>10 Projects</p>
+						<p>Projects</p>
 					</div>
 					<img src={Web} alt="Web" />
 				</Link>
 				<Link to="/proyectos/movil" className="card-proyecto noSelect card-2">
 					<div className="info-card">
 						<h1>Móvil</h1>
-						<p>10 Projects</p>
+						<p>Projects</p>
 					</div>
 					<img src={Movile} alt="Móvile" />
 				</Link>

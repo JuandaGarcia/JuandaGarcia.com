@@ -12,7 +12,7 @@ function Home() {
 						<h1>
 							Hola soy
 							<br />
-							<strong>Juan David Garcia Rincon</strong>
+							<strong>Juan David García Rincón</strong>
 						</h1>
 						<p>
 							Frontend Developer con gran pasión por el diseño y desarrollo web.
