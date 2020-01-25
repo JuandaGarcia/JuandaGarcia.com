@@ -1,5 +1,5 @@
 import React from 'react'
-import me from '../img/me.jpg'
+// import me from '../img/me.jpg'
 
 function SobreMi() {
 	return (
@@ -9,17 +9,16 @@ function SobreMi() {
 					<h1>Sobre mí</h1>
 					<br />
 					<p>
-						Hola, soy Juan David García Rincón tengo 19 años y actualmente me
-						encuentro estudiando sistemas en la universidad Santiago de Cali.
+						Hola, soy Juan David García Rincón tengo 19 años, me gusta todo lo
+						relacionado con el desarrollo web y soy muy autodidacta.
 					</p>
 					<br />
 					<br />
 					<h1>Mis habilidades</h1>
 					<br />
 					<p>
-						Además de los cursos que he tomado en la universidad, he tomado
-						varios cursos en línea a medida que avanzo en mis habilidades.
-						Algunos de estos cursos incluyen{' '}
+						He tomado varios cursos en línea a medida que avanzo en mis
+						habilidades. Algunos de estos cursos incluyen{' '}
 						<a
 							className="noSelect"
 							target="_blank"
@@ -95,7 +94,10 @@ function SobreMi() {
 					</div>
 				</div>
 				<div className="sobre-mi-img">
-					<img src={me} alt="Juanda Garcia" />
+					<img
+						src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+						/* {me} */ alt="Juanda Garcia"
+					/>
 				</div>
 			</div>
 		</div>

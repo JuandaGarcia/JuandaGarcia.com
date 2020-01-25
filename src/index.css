@@ -1236,17 +1236,16 @@ path#f3-l9 {
 }
 
 .projects-list {
-	overflow: auto;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 	justify-content: space-around;
 	height: 55vh;
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	top: 45vh;
+	top: 5vh;
 	padding: 0 3em;
 }
 
@@ -1574,7 +1573,7 @@ path#f3-l9 {
 	}
 
 	.projects-list {
-		top: 38vh;
+		top: 5vh;
 		height: 54vh;
 	}
 
@@ -1592,6 +1591,10 @@ path#f3-l9 {
 		width: 9em;
 		margin-right: 1em;
 	}
+
+	.search-search {
+		width: 15%;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -1600,6 +1603,10 @@ path#f3-l9 {
 	}
 	.info-hero h1 {
 		font-size: 18px;
+	}
+	.proyecto-item {
+		width: 310px;
+		height: 200px;
 	}
 }
 
