@@ -95,7 +95,7 @@ function SobreMi() {
 				</div>
 				<div className="sobre-mi-img">
 					<img
-						src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+						src="https://juandagarcia.com/img/setup.jpg"
 						/* {me} */ alt="Juanda Garcia"
 					/>
 				</div>
