@@ -50,7 +50,7 @@ export const projects = {
 			img: 'https://juandagarcia.com/img/rick-and-morty.png',
 			img_details: 'https://juandagarcia.com/img/rick-and-morty-details.png',
 			type: 'Web',
-			link: false,
+			link: 'https://juandagarcia.github.io/MemoryGame/',
 			github_link: 'https://github.com/JuandaGarcia/MemoryGame',
 			play_store: false,
 			app_store: false
