@@ -28,7 +28,7 @@ class Contacto extends React.Component {
 
 		try {
 			await fetch(
-				'http://servicios.juandagarcia.com/juandagarcia.php',
+				'https://servicios.juandagarcia.com/juandagarcia.php',
 				requestOptions
 			).then(() => {
 				Swal.fire({
