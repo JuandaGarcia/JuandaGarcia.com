@@ -94,10 +94,7 @@ function SobreMi() {
 					</div>
 				</div>
 				<div className="sobre-mi-img">
-					<img
-						src="https://juandagarcia.com/img/setup.jpg"
-						/* {me} */ alt="Juanda Garcia"
-					/>
+					<img src="/img/me.jpg" /* {me} */ alt="Juanda Garcia" />
 				</div>
 			</div>
 		</div>

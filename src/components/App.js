@@ -8,6 +8,7 @@ import SobreMi from '../pages/SobreMi'
 import Contacto from '../pages/Contacto'
 import NotFound from '../pages/NotFound'
 import ProjectDetails from '../pages/ProjectDetails'
+import Hosting from '../pages/Hosting'
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 					/>
 					<Route exact path="/sobre-mi" component={SobreMi} />
 					<Route exact path="/contacto" component={Contacto} />
+					<Route exact path="/hosting" component={Hosting} />
 					<Route component={NotFound} />
 				</Switch>
 			</Layout>

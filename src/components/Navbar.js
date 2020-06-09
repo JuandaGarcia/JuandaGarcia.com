@@ -4,22 +4,22 @@ import Logo from '../img/logo.png'
 
 class Navbar extends React.Component {
 	state = {
-		ActiveClassName: ''
+		ActiveClassName: '',
 	}
 
 	toggleMenu() {
 		if (this.state.ActiveClassName === 'is-active') {
 			this.setState({
-				ActiveClassName: ''
+				ActiveClassName: '',
 			})
 		} else {
 			this.setState({
-				ActiveClassName: 'is-active'
+				ActiveClassName: 'is-active',
 			})
 		}
 	}
 
-	handleClick = e => {
+	handleClick = (e) => {
 		this.toggleMenu()
 	}
 
@@ -78,6 +78,16 @@ class Navbar extends React.Component {
 								Contacto
 							</Link>
 						</li>
+						{/* <li>
+							<Link
+								className="noSelect link-navbar"
+								onClick={this.handleClick}
+								id="Hosting"
+								to="/hosting"
+							>
+								Hosting
+							</Link>
+						</li> */}
 					</ol>
 				</nav>
 				<div className="redes">

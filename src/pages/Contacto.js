@@ -1,13 +1,57 @@
 import React from 'react'
-import swal from 'sweetalert'
+import Swal from 'sweetalert2'
 
 class Contacto extends React.Component {
-	componentDidMount() {
-		swal(
-			'Esta página está en construcción!',
-			'Si deseas enviarme un mensaje hazlo a través de mis redes sociales :)',
-			'warning'
-		)
+	state = {
+		nombre: '',
+		email: '',
+		mensaje: '',
+	}
+
+	PostData = async (e) => {
+		e.preventDefault()
+		let myHeaders = new Headers()
+		myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
+
+		let urlencoded = new URLSearchParams()
+		urlencoded.append('nombre', this.state.nombre)
+		urlencoded.append('email', this.state.email)
+		urlencoded.append('mensaje', this.state.mensaje)
+
+		let requestOptions = {
+			mode: 'no-cors',
+			method: 'POST',
+			headers: myHeaders,
+			body: urlencoded,
+			redirect: 'follow',
+		}
+
+		try {
+			await fetch(
+				'http://servicios.juandagarcia.com/juandagarcia.php',
+				requestOptions
+			).then(() => {
+				Swal.fire({
+					position: 'center',
+					icon: 'success',
+					title: 'El mensaje se envió con éxito',
+					showConfirmButton: false,
+				})
+			})
+		} catch (error) {
+			Swal.fire({
+				position: 'center',
+				icon: 'error',
+				title: 'Ocurrió un error, por favor inténtalo mas tarde',
+				showConfirmButton: false,
+			})
+		}
+
+		this.setState({
+			nombre: '',
+			email: '',
+			mensaje: '',
+		})
 	}
 
 	render() {
@@ -178,28 +222,34 @@ class Contacto extends React.Component {
 								{}
 							</a>
 						</div>
-						<form action="" /* method="post" */>
+						<form onSubmit={(e) => this.PostData(e)}>
 							<input
 								placeholder="Nombre"
 								required
+								value={this.state.nombre}
 								className="input-textarea"
 								name="name"
 								type="text"
 								maxLength="40"
+								onChange={(e) => this.setState({ nombre: e.target.value })}
 							/>
 							<br />
 							<input
 								required
 								placeholder="Email"
+								value={this.state.email}
 								className="input-textarea"
 								name="email"
 								type="email"
 								maxLength="50"
+								onChange={(e) => this.setState({ email: e.target.value })}
 							/>
 							<br />
 							<textarea
 								placeholder="Mensaje"
 								required
+								value={this.state.mensaje}
+								onChange={(e) => this.setState({ mensaje: e.target.value })}
 								className="input-textarea"
 								name="mensaje"
 								id=""

@@ -245,7 +245,7 @@ a {
 
 .flores-hero img {
 	width: 30em;
-	opacity: 60%;
+	opacity: 0.6;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -275,7 +275,7 @@ a {
 
 .flores-projects img {
 	width: 40em;
-	opacity: 100%;
+	opacity: 1;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -285,7 +285,7 @@ a {
 }
 .flores-projects-vuelta img {
 	width: 40em;
-	opacity: 100%;
+	opacity: 1;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -515,6 +515,7 @@ textarea::-webkit-scrollbar-thumb {
 .movile-web-proyects {
 	width: 50%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
@@ -991,6 +992,7 @@ path#f3-l9 {
 	height: 100%;
 	font-size: 0.9em;
 	align-items: center;
+	overflow: auto;
 }
 
 .list-info-sobremi {
@@ -1377,6 +1379,78 @@ path#f3-l9 {
 	height: 1.5em;
 }
 
+.hosting {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3%;
+}
+
+.contenedor-hosting {
+	background-color: #303030;
+	border-radius: 15px;
+	display: flex;
+	padding: 3%;
+	width: 90%;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10%;
+	position: relative;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.contenedor-hosting img {
+	width: 30%;
+	position: absolute;
+	left: -8%;
+}
+
+.btn-purple {
+	background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 100%);
+	border: none;
+	border-radius: 5px;
+	height: 40px;
+	width: 350px;
+	font-weight: 800;
+	margin-top: 16px;
+	display: flex;
+	font-size: 14px;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	cursor: url('./img/cursor-pointer.png'), pointer;
+	transition: 0.2s;
+}
+
+.btn-purple:hover {
+	font-size: 15px;
+	background: linear-gradient(90deg, #8e2de2 0%, #4a00e0 80%);
+}
+
+.contenedor-info-hosting {
+	text-align: center;
+	width: 75%;
+	margin-left: 25%;
+	align-items: center;
+}
+
+.contenedor-boton-hosting {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.info-hosting {
+	text-align: left;
+}
+
+/* #Hosting {
+	display: none;
+} */
+
 @media screen and (max-width: 1024px) {
 	.menu {
 		font-size: 11px;
@@ -1399,6 +1473,37 @@ path#f3-l9 {
 	}
 	.flores-projects-vuelta img {
 		width: 30em;
+	}
+
+	.contenedor-hosting img {
+		width: 50%;
+		position: initial;
+		margin-bottom: 40px;
+	}
+
+	.contenedor-hosting h1 {
+		font-size: 20px;
+	}
+	.contenedor-hosting h2 {
+		font-size: 16px;
+	}
+
+	.contenedor-info-hosting {
+		text-align: center;
+		width: 100%;
+		margin-left: 0%;
+		align-items: center;
+	}
+
+	.contenedor-hosting {
+		position: initial;
+		margin: 0%;
+		background-color: transparent;
+	}
+
+	.hosting {
+		margin-bottom: 20%;
+		padding-top: 10%;
 	}
 }
 
@@ -1594,6 +1699,9 @@ path#f3-l9 {
 
 	.search-search {
 		width: 15%;
+	}
+	#Hosting {
+		display: initial;
 	}
 }
 
