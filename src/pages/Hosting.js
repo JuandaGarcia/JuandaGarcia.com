@@ -4,7 +4,7 @@ const Hosting = () => {
 	return (
 		<div className="hosting">
 			<div className="contenedor-hosting">
-				<img src="https://juandagarcia.com/img/hosting.png" alt="" />
+				<img src="/img/hosting.png" alt="" />
 				<div className="contenedor-info-hosting">
 					<h1>¿Por qué escoger el Web Hosting de HostGator?</h1>
 					<br />
