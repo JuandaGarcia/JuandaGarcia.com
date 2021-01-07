@@ -11,6 +11,10 @@
 	color: white;
 }
 
+:root {
+	--max-width: 1440px;
+}
+
 body {
 	background-color: #212121;
 	padding: 3em;
@@ -430,6 +434,9 @@ a {
 	height: 80%;
 	padding-top: 65px;
 	flex-wrap: wrap;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	align-items: center;
 }
 
 .illustration,
@@ -985,6 +992,8 @@ path#f3-l9 {
 	align-items: flex-start;
 	width: 100%;
 	height: 85%;
+	max-width: var(--max-width);
+	margin: 0 auto;
 }
 
 .sobre-mi-info {
@@ -1249,6 +1258,8 @@ path#f3-l9 {
 	bottom: 0;
 	top: 5vh;
 	padding: 0 3em;
+	max-width: var(--max-width);
+	margin: 0 auto;
 }
 
 .project-type-title {
@@ -1311,6 +1322,8 @@ path#f3-l9 {
 	width: 100%;
 	height: 85%;
 	flex-wrap: wrap;
+	max-width: var(--max-width);
+	margin: 0 auto;
 }
 
 .img-detalles-proyecto {

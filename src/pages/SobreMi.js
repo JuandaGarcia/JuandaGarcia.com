@@ -68,28 +68,28 @@ function SobreMi() {
 					<br />
 					<div className="list-info-sobremi">
 						<ul>
-							<li>• React.js</li>
+							<li>• React</li>
 							<li>• Redux</li>
+							<li>• NextJS</li>
+							<li>• Firebase</li>
+						</ul>
+						<ul>
 							<li>• HTML5</li>
 							<li>• CSS3</li>
-						</ul>
-						<ul>
+							<li>• SASS</li>
 							<li>• JavaScript</li>
+						</ul>
+						<ul>
 							<li>• Git / GitHub</li>
-							<li>• Wordpress</li>
-							<li>• C#</li>
+							<li>• NodeJS</li>
+							<li>• Express</li>
+							<li>• MongoDB</li>
 						</ul>
 						<ul>
-							<li>• C / C++</li>
-							<li>• Java</li>
-							<li>• PHP</li>
 							<li>• MySQL</li>
-						</ul>
-						<ul>
-							<li>• Unity</li>
-							<li>• Photoshop</li>
+							<li>• UI / UX</li>
 							<li>• Figma</li>
-							<li>• Vegas Pro </li>
+							<li>• Photoshop</li>
 						</ul>
 					</div>
 				</div>
