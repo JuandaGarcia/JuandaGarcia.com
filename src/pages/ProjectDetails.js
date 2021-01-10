@@ -16,10 +16,10 @@ class ProjectDetails extends React.Component {
 			link: '',
 			github_link: '',
 			play_store: '',
-			app_store: ''
+			app_store: '',
 		},
 		loading: false,
-		error: null
+		error: null,
 	}
 
 	componentDidMount() {
@@ -30,7 +30,7 @@ class ProjectDetails extends React.Component {
 		this.setState({ loading: true, error: null })
 		try {
 			const filter = Object.keys(projects)
-				.filter(key => this.state.type === key)
+				.filter((key) => this.state.type === key)
 				.reduce((obj, key) => {
 					obj[key] = projects[key]
 					return obj
@@ -39,7 +39,7 @@ class ProjectDetails extends React.Component {
 			const data = filter[Object.keys(filter)[0]]
 
 			const projectDetails = data.filter(
-				type => type.id === this.state.name_project
+				(type) => type.id === this.state.name_project
 			)
 
 			if (!projectDetails.length) {
@@ -65,50 +65,52 @@ class ProjectDetails extends React.Component {
 			)
 		}
 		return (
-			<div className="contenedor-detalles">
-				<div className="img-detalles-proyecto">
-					<img
-						className="noSelect"
-						src={this.state.data.img_details}
-						alt={`${this.state.data.name} img`}
-					/>
-				</div>
-				<div className="info-detalles-proyecto">
-					<div>
-						<h1>{this.state.data.name}</h1>
-						<div className="parrafo-detalles">
-							<p>{this.state.data.description}</p>
-						</div>
-						<ul className="lista-detalles">
-							{this.state.data.technologies.map(tech => (
-								<li key={tech}>• {tech}</li>
-							))}
-						</ul>
-						<div className="botones-detalles">
-							<ProjectButtons
-								link={this.state.data.github_link}
-								css={'github'}
-								text={'Ver en GitHub'}
-							/>
-							<ProjectButtons
-								link={this.state.data.play_store}
-								css={'google-play'}
-								text={'Play Store'}
-							/>
-							<ProjectButtons
-								link={this.state.data.app_store}
-								css={'app-store'}
-								text={'App Store'}
-							/>
-							<ProjectButtons
-								link={this.state.data.link}
-								css={'link'}
-								text={'Ver sitio'}
-							/>
+			<main className="section-page">
+				<div className="contenedor-detalles">
+					<div className="img-detalles-proyecto">
+						<img
+							className="noSelect"
+							src={this.state.data.img_details}
+							alt={`${this.state.data.name} img`}
+						/>
+					</div>
+					<div className="info-detalles-proyecto">
+						<div>
+							<h1>{this.state.data.name}</h1>
+							<div className="parrafo-detalles">
+								<p>{this.state.data.description}</p>
+							</div>
+							<ul className="lista-detalles">
+								{this.state.data.technologies.map((tech) => (
+									<li key={tech}>• {tech}</li>
+								))}
+							</ul>
+							<div className="botones-detalles">
+								<ProjectButtons
+									link={this.state.data.github_link}
+									css={'github'}
+									text={'Ver en GitHub'}
+								/>
+								<ProjectButtons
+									link={this.state.data.play_store}
+									css={'google-play'}
+									text={'Play Store'}
+								/>
+								<ProjectButtons
+									link={this.state.data.app_store}
+									css={'app-store'}
+									text={'App Store'}
+								/>
+								<ProjectButtons
+									link={this.state.data.link}
+									css={'link'}
+									text={'Ver sitio'}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</main>
 		)
 	}
 }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
 	return (
-		<section className="hero">
+		<main className="hero section-page">
 			<div className="info-hero">
 				<div className="soy">
 					<h1>
@@ -27,7 +27,7 @@ function Home() {
 			<figure className="img-hero">
 				<img src={Coder} alt="Juanda Garcia" />
 			</figure>
-		</section>
+		</main>
 	)
 }
 

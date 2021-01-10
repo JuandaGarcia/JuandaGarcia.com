@@ -14,7 +14,7 @@ class ProjectType extends React.Component {
 		error: null,
 		textoBusqueda: '',
 		searchResult: [],
-		button_search: ''
+		button_search: '',
 	}
 
 	componentDidMount() {
@@ -25,7 +25,7 @@ class ProjectType extends React.Component {
 		this.setState({ loading: true, error: null })
 		try {
 			const filter = Object.keys(projects)
-				.filter(key => this.state.type === key)
+				.filter((key) => this.state.type === key)
 				.reduce((obj, key) => {
 					obj[key] = projects[key]
 					return obj
@@ -40,13 +40,13 @@ class ProjectType extends React.Component {
 		}
 	}
 
-	handleChange = e => {
+	handleChange = (e) => {
 		const texto = e.target.value
 		this.setState({
 			textoBusqueda: texto,
-			button_search: 'cancel-search-search'
+			button_search: 'cancel-search-search',
 		})
-		const search = this.state.data.filter(project => {
+		const search = this.state.data.filter((project) => {
 			return `${project.name} ${
 				project.description
 			} ${project.technologies.reduce((a, b) => `${a} ${b}`)}`
@@ -57,7 +57,7 @@ class ProjectType extends React.Component {
 		this.setState({ searchResult: search })
 	}
 
-	handleClink = e => {
+	handleClink = (e) => {
 		this.setState({ textoBusqueda: '' })
 	}
 
@@ -92,7 +92,7 @@ class ProjectType extends React.Component {
 						></button>
 					</form>
 					<div className="projects-list noScrollBar">
-						{this.state.data.map(project => {
+						{this.state.data.map((project) => {
 							return (
 								<div key={project.id}>
 									<Link
@@ -155,7 +155,7 @@ class ProjectType extends React.Component {
 					></button>
 				</form>
 				<div className="projects-list noScrollBar">
-					{this.state.searchResult.map(project => {
+					{this.state.searchResult.map((project) => {
 						return (
 							<div key={project.id}>
 								<Link

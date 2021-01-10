@@ -13,12 +13,14 @@
 
 :root {
 	--max-width: 1440px;
+	--padding-page: 3rem;
+	--header-height: 6rem;
+	--section-height: calc(100vh - var(--header-height));
 }
 
 body {
 	background-color: #212121;
-	padding: 3em;
-	height: 100vh;
+	min-height: 100vh;
 	cursor: url('./img/cursor.png'), auto;
 }
 
@@ -46,11 +48,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
-	height: 5%;
+	height: var(--header-height);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 5%;
+	padding: var(--padding-page);
+	padding-bottom: 0;
 }
 
 header li a {
@@ -72,12 +75,21 @@ header li {
 	text-transform: uppercase;
 }
 
+.section-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: var(--section-height);
+	padding: var(--padding-page);
+}
+
 .link-navbar:hover {
 	background: -webkit-linear-gradient(
 		0deg,
 		rgba(17, 153, 142, 1) 0%,
 		rgba(56, 239, 125, 1) 50%
 	);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -106,8 +118,8 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 83%;
-	padding-top: 65px;
+	height: var(--section-height);
+	padding: var(--padding-page);
 }
 
 .img-hero {
@@ -131,7 +143,8 @@ a {
 }
 
 .img-hero img {
-	height: 100%;
+	width: 90%;
+	max-width: 790px;
 }
 
 .info-hero h1 {
@@ -504,6 +517,7 @@ textarea::-webkit-scrollbar-thumb {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	height: 80%;
 	padding-top: 50px;
 }
 
@@ -991,7 +1005,6 @@ path#f3-l9 {
 	justify-content: center;
 	align-items: flex-start;
 	width: 100%;
-	height: 85%;
 	max-width: var(--max-width);
 	margin: 0 auto;
 }
@@ -999,33 +1012,33 @@ path#f3-l9 {
 .sobre-mi-info {
 	width: 65%;
 	height: 100%;
-	font-size: 0.9em;
+	font-size: 1.1rem;
 	align-items: center;
 	overflow: auto;
 }
 
 .list-info-sobremi {
-	display: flex;
 	width: 100%;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .sobre-mi-info li {
-	width: 165px;
 	margin: 5px 0;
 }
 
 .sobre-mi-img {
 	width: 30%;
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: auto 0;
 	margin-left: 5%;
 }
 
 .sobre-mi-img img {
 	width: 100%;
+	border-radius: 5px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -1049,7 +1062,7 @@ path#f3-l9 {
 }
 .gradient-border {
 	--borderWidth: 5px;
-	background: #1d1f20;
+	background: #212121;
 	position: relative;
 	border-radius: var(--borderWidth);
 }
@@ -1103,13 +1116,11 @@ path#f3-l9 {
 }
 
 .proyecto-item {
-	width: 340px;
 	height: 200px;
 	background-color: #303030;
 	border-radius: 10px;
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 45px;
 	--tamaño: 5px;
 	--color: white;
 }
@@ -1200,10 +1211,12 @@ path#f3-l9 {
 
 .project-type {
 	width: 100%;
-	height: 20%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto;
+	grid-gap: var(--padding-page);
+	justify-content: center;
+	padding: var(--padding-page);
 }
 
 .search {
@@ -1211,7 +1224,7 @@ path#f3-l9 {
 	width: 50%;
 	height: 45px;
 	position: relative;
-	margin: 0 15%;
+	margin: 0 auto;
 }
 
 .search input {
@@ -1247,28 +1260,19 @@ path#f3-l9 {
 }
 
 .projects-list {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 340px);
+	grid-gap: var(--padding-page);
 	width: 100%;
-	justify-content: space-around;
-	height: 55vh;
-	position: relative;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 5vh;
-	padding: 0 3em;
 	max-width: var(--max-width);
+	justify-content: space-around;
 	margin: 0 auto;
 }
 
 .project-type-title {
-	width: 80%;
-	height: 5%;
 	font-size: 50px;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
-	padding-bottom: 75px;
 }
 
 .noScrollBar::-webkit-scrollbar {
@@ -1319,6 +1323,7 @@ path#f3-l9 {
 
 .contenedor-detalles {
 	display: flex;
+	align-items: center;
 	width: 100%;
 	height: 85%;
 	flex-wrap: wrap;
@@ -1468,7 +1473,6 @@ path#f3-l9 {
 	.menu {
 		font-size: 11px;
 	}
-
 	.illustration {
 		width: 100%;
 		margin-bottom: 50px;
@@ -1518,9 +1522,7 @@ path#f3-l9 {
 		margin-bottom: 20%;
 		padding-top: 10%;
 	}
-}
 
-@media screen and (max-width: 768px) {
 	.movile-web-proyects {
 		width: 90%;
 	}
@@ -1545,13 +1547,10 @@ path#f3-l9 {
 	.illustration {
 		display: none;
 	}
-	body {
-		height: 92vh;
-	}
 
 	.hero {
-		flex-wrap: wrap-reverse;
-		height: 90%;
+		flex-direction: column-reverse;
+		justify-content: center;
 	}
 
 	.info-hero h1 {
@@ -1564,11 +1563,12 @@ path#f3-l9 {
 
 	.img-hero {
 		width: 100%;
-		height: 50%;
+		height: auto;
+		margin-bottom: 5rem;
 	}
 
 	.img-hero img {
-		height: 100%;
+		width: 50%;
 	}
 
 	.info-hero {
@@ -1596,6 +1596,14 @@ path#f3-l9 {
 		justify-content: center;
 		transition: 0.3s;
 		font-size: 18px;
+	}
+
+	.gradient-border {
+		padding: 0;
+	}
+
+	.gradient-border::after {
+		display: none;
 	}
 
 	header ol {
@@ -1630,11 +1638,6 @@ path#f3-l9 {
 		width: 100%;
 	}
 
-	.sobremi {
-		height: 95%;
-		padding-top: 30px;
-	}
-
 	.sobre-mi-info {
 		width: 100%;
 		height: 65%;
@@ -1646,25 +1649,21 @@ path#f3-l9 {
 	}
 
 	.sobre-mi-img {
-		width: 100%;
-		height: 30%;
+		width: 50%;
 		margin: 0;
 		margin-bottom: 5%;
 		overflow: hidden;
 	}
 
 	.sobre-mi-img img {
-		width: 80%;
+		width: 100%;
 	}
 
 	#box {
 		width: 100%;
-		padding: 25px;
+		padding: 0;
+		padding-bottom: 0;
 		height: 100%;
-	}
-
-	.sobre-mi-info li {
-		width: 100px;
 	}
 	.sobre-mi-info ul {
 		margin-bottom: 15px;
@@ -1684,15 +1683,6 @@ path#f3-l9 {
 	.search {
 		width: 100%;
 		margin: 0;
-	}
-
-	.project-type-title {
-		padding-top: 35px;
-	}
-
-	.projects-list {
-		top: 5vh;
-		height: 54vh;
 	}
 
 	.img-detalles-proyecto {
@@ -1718,16 +1708,32 @@ path#f3-l9 {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	.list-info-sobremi {
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+	}
+	.sobre-mi-img {
+		width: 80%;
+		margin: 0;
+		margin-bottom: 5%;
+		overflow: hidden;
+	}
+
+	.sobre-mi-img img {
+		width: 100%;
+	}
+	.img-hero img {
+		width: 100%;
+	}
+}
+
 @media screen and (max-width: 480px) {
 	.info-404 h1 {
 		font-size: 25px;
 	}
 	.info-hero h1 {
 		font-size: 18px;
-	}
-	.proyecto-item {
-		width: 310px;
-		height: 200px;
 	}
 }
 
