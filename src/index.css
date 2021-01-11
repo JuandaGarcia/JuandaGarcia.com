@@ -1017,6 +1017,42 @@ path#f3-l9 {
 	overflow: auto;
 }
 
+.sobre-mi-info__links {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	margin-top: 2rem;
+	width: 100%;
+}
+
+.download-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7em 1em;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #38ef7d;
+	color: #38ef7d;
+	border-radius: 5px;
+}
+
+.download-btn.white {
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.download-icon {
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+	background-image: url('/icons/download.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: 1rem;
+}
+
 .list-info-sobremi {
 	width: 100%;
 	display: grid;
@@ -1490,6 +1526,12 @@ path#f3-l9 {
 	}
 	.flores-projects-vuelta img {
 		width: 30em;
+	}
+
+	.sobre-mi-info__links {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		width: 100%;
 	}
 
 	.contenedor-hosting img {

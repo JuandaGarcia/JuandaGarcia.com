@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import me from '../img/me.jpg'
 
 function SobreMi() {
@@ -20,64 +21,13 @@ function SobreMi() {
 							en HTML5, CSS3 y JavaScript junto con librerías como React JS,
 							manejadores de estados como Redux, Frameworks como NextJS para
 							hacer server side rendering, preprocesadores de CSS como SASS,
-							Responsive Design), maquetación con CSS Grid Layoud y Flexbox,
-							etc.
+							Responsive Design, maquetación con CSS Grid Layoud y Flexbox, etc.
 						</p>
 						<br />
 						<br />
 						<h1>
 							Mis habilidades <>🌌</>
 						</h1>
-						<br />
-						<p>
-							He tomado varios cursos en línea a medida que avanzo en mis
-							habilidades. Algunos de estos cursos incluyen{' '}
-							<a
-								className="noSelect"
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://platzi.com/clases/html5-css3/"
-							>
-								<strong>Desarrollo web online</strong>
-							</a>
-							{''},{' '}
-							<a
-								className="noSelect"
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://platzi.com/clases/responsive-design/"
-							>
-								<strong>Responsive Design</strong>
-							</a>
-							{''},{' '}
-							<a
-								className="noSelect"
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://platzi.com/clases/fundamentos-javascript/"
-							>
-								<strong>Fundamentos de JavaScript</strong>
-							</a>
-							{''},{' '}
-							<a
-								className="noSelect"
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://platzi.com/clases/react/"
-							>
-								<strong>React.js</strong>
-							</a>
-							{''},{' '}
-							<a
-								className="noSelect"
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://platzi.com/clases/redux/"
-							>
-								<strong>Redux</strong>
-							</a>
-							{''}, etc.
-						</p>
 						<br />
 						<div className="list-info-sobremi">
 							<ul>
@@ -104,6 +54,18 @@ function SobreMi() {
 								<li>• Figma</li>
 								<li>• Photoshop</li>
 							</ul>
+						</div>
+						<div className="sobre-mi-info__links">
+							<a
+								className="download-btn"
+								href="/docs/cv-juan-garcia.pdf"
+								download
+							>
+								<span className="download-icon"></span>Descargar CV
+							</a>
+							<Link className="download-btn white" to="/proyectos">
+								Ver Proyectos
+							</Link>
 						</div>
 					</div>
 					<div className="sobre-mi-img">
