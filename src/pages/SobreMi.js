@@ -13,15 +13,14 @@ function SobreMi() {
 						</h1>
 						<br />
 						<p>
-							Hola, mi nombre es Juan David García Rincón, tengo 20 años,
-							actualmente trabajo como desarrollador Frontend en Waco Services.
-							Me considero una persona muy creativa y autodidacta. En 2019 gane
-							una Beca para hacer parte del programa de Frontend de Facebook
-							Developer Circles y Platzi. A la fecha tengo conocimientos amplios
-							en HTML5, CSS3 y JavaScript junto con librerías como React JS,
-							manejadores de estados como Redux, Frameworks como NextJS para
-							hacer server side rendering, preprocesadores de CSS como SASS,
-							Responsive Design, maquetación con CSS Grid Layoud y Flexbox, etc.
+							Mi nombre es Juan David García Rincón, tengo 21 años y me
+							considero una persona muy creativa y autodidacta. Cuento con 3
+							años de experiencia en el área del desarrollo Frontend trabajando
+							en proyectos con empresas de diferentes lugares de Colombia, mi
+							tecnología favorita para desarrollar es React junto con NextJS. Mi
+							objetivo como profesional es desarrollar soluciones tecnológicas
+							que generen un gran impacto en la sociedad aplicando mis
+							conocimientos en tecnología y desarrollo software.
 						</p>
 						<br />
 						<br />
